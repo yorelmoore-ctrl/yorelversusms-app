@@ -5,16 +5,13 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Yorel</title>
+<title>Yorel • Home</title>
 
-<link rel="stylesheet"
-href="../style.css">
-
-<link rel="stylesheet"
-href="../css/home.css">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/home.css">
 
 </head>
 
@@ -23,54 +20,44 @@ href="../css/home.css">
 <div class="background"></div>
 <div class="sparkles"></div>
 
-<div class="home-container">
+<header class="app-header">
 
-<h1 class="greeting">
+<div class="logo">
+🌙 Yorel
+</div>
 
-🌙 Good Evening
+<div class="profile-icon">
+💜
+</div>
 
-</h1>
+</header>
 
-<p class="welcome">
+<main class="page-content">
 
+<h1 id="greeting">🌙 Good Evening</h1>
+
+<p class="subtitle">
 Welcome back, friend.
-
 </p>
 
 <div class="card">
 
-<h2>
+<h2>💜 Daily Affirmation</h2>
 
-💜 Daily Affirmation
-
-</h2>
-
-<p id="affirmation">
-
-You deserve rest today.
-
-</p>
+<p id="affirmation"></p>
 
 </div>
 
 <div class="card">
 
-<h2>
-
-How are you feeling?
-
-</h2>
+<h2>How are you feeling?</h2>
 
 <div class="moods">
 
 <button>😊</button>
-
 <button>🙂</button>
-
 <button>😐</button>
-
 <button>😔</button>
-
 <button>😣</button>
 
 </div>
@@ -78,9 +65,7 @@ How are you feeling?
 </div>
 
 <h2 class="section-title">
-
 Quick Access
-
 </h2>
 
 <div class="grid">
@@ -91,19 +76,33 @@ Quick Access
 
 <a href="symptoms.html">🩺 Symptoms</a>
 
-<a href="medications.html">💊 Medication</a>
+<a href="medications.html">💊 Medications</a>
 
 <a href="nutrition.html">🥑 Nutrition</a>
+
+<a href="stretches.html">🧘 Stretches</a>
 
 <a href="tarot.html">🔮 Tarot</a>
 
 <a href="affirmations.html">✨ Affirmations</a>
 
-<a href="profile.html">⚙ Profile</a>
+<a href="profile.html">👤 Profile</a>
 
 </div>
 
-</div>
+</main>
+
+<nav class="bottom-nav">
+
+<a href="home.html">🏠<span>Home</span></a>
+
+<a href="journal.html">📖<span>Journal</span></a>
+
+<a href="selfcare.html">💜<span>Care</span></a>
+
+<a href="profile.html">👤<span>Profile</span></a>
+
+</nav>
 
 <script src="../js/home.js"></script>
 
