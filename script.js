@@ -1,84 +1,50 @@
-// Yorel Versus MS App
-// Main Navigation + App Functions
+function enterApp(){
+
+document.getElementById("welcome")
+.style.display="none";
 
 
-function enterApp() {
+document.getElementById("appContent")
+.classList.remove("hidden");
 
-    const welcome = document.getElementById("welcome");
-    const mainApp = document.getElementById("mainApp");
 
-    welcome.classList.remove("active");
-    welcome.classList.add("hidden");
-
-    mainApp.classList.remove("hidden");
-
-    showPage("home");
+showPage("home");
 
 }
 
 
 
+function showPage(page){
 
-function showPage(pageName) {
+document.querySelectorAll(".page")
+.forEach(section=>{
 
-    const pages = document.querySelectorAll(".page");
+section.classList.remove("active");
 
-    pages.forEach(page => {
-        page.classList.remove("active");
-    });
-
-
-    const selectedPage = document.getElementById(pageName);
+});
 
 
-    if(selectedPage){
-
-        selectedPage.classList.add("active");
-
-    }
-
+document.getElementById(page)
+.classList.add("active");
 
 }
 
 
 
-// Save Symptom Notes
+function saveEntry(){
 
-function saveData(){
-
-    const notes = document.querySelector("textarea").value;
-
-    localStorage.setItem(
-        "msNotes",
-        notes
-    );
+let text =
+document.querySelector("textarea").value;
 
 
-    alert(
-        "Your check-in has been saved 💜"
-    );
+localStorage.setItem(
+"yorelEntry",
+text
+);
+
+
+alert(
+"Saved to Evidence I Exist 💜"
+);
 
 }
-
-
-
-
-// Load Saved Notes
-
-window.onload = function(){
-
-    const savedNotes =
-    localStorage.getItem("msNotes");
-
-
-    const textArea =
-    document.querySelector("textarea");
-
-
-    if(savedNotes && textArea){
-
-        textArea.value = savedNotes;
-
-    }
-
-};
