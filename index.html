@@ -1,15 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=pages/home.html">
-<title>Yorel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yorel Versus MS</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="theme-color" content="#7b2cbf">
 </head>
 
 <body>
 
-<p>If you are not redirected automatically,
-<a href="pages/home.html">click here</a>.</p>
+<div class="app">
+
+    <!-- Opening Screen -->
+    <section id="welcome" class="screen active">
+
+        <div class="book">
+
+            <div class="stars">✨ 🌙 ✨</div>
+
+            <h1>
+                Yorel<br>
+                Versus MS
+            </h1>
+
+            <p>
+                A place to track your symptoms,
+                celebrate your wins, and remember
+                that your illness is only one chapter
+                of your story.
+            </p>
+
+            <button onclick="enterApp()">
+                Open My Journal 💜
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Main App -->
+    <section id="mainApp" class="hidden">
+
+
+        <!-- Home -->
+        <div id="home" class="page active">
+
+            <h2>🌙 Welcome Back</h2>
+
+            <div class="card">
+                <h3>Today's Check-In</h3>
+
+                <p>
+                    How is your body feeling today?
+                </p>
+
+                <div class="stats">
+
+                    <div>
+                        ⚡
+                        <span>Energy</span>
+                        <input type="range">
+                    </div>
+
+                    <div>
+                        💜
+                        <span>Mood</span>
+                        <input type="range">
+                    </div>
+
+                    <div>
+                        🦋
+                        <span>Pain</span>
+                        <input type="range">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Daily Reminder</h3>
+
+                <p>
+                    You are allowed to rest.
+                    Your body is still worthy on hard days.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Symptoms -->
+        <div id="symptoms" class="page">
+
+            <h2>🩹 Symptom Tracker</h2>
+
+            <div class="card">
+
+                <label>
+                    Fatigue
+                    <input type="range">
+                </label>
+
+                <label>
+                    Nerve Pain
+                    <input type="range">
+                </label>
+
+                <label>
+                    Mobility
+                    <input type="range">
+                </label>
+
+                <label>
+                    Vision
+                    <input type="range">
+                </label>
+
+
+                <textarea placeholder="Write your symptoms..."></textarea>
+
+                <button>
+                    Save Check-In 💾
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Self Care -->
+        <div id="selfcare" class="page">
+
+            <h2>🕯 Self Care Room</h2>
+
+            <div class="card">
+
+                <p>✨ Stretch</p>
+                <p>✨ Breathing Exercise</p>
+                <p>✨ Affirmations</p>
+                <p>✨ Calm Sounds</p>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Evidence Vault -->
+        <div id="vault" class="page">
+
+            <h2>📖 Evidence Vault</h2>
+
+            <div class="card">
+
+                <p>
+                    Save your victories.
+                    Big or small.
+                </p>
+
+                <textarea placeholder="Today I am proud of..."></textarea>
+
+                <button>
+                    Save Memory 💜
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Settings -->
+        <div id="settings" class="page">
+
+            <h2>⚙️ Settings</h2>
+
+            <div class="card">
+
+                <p>
+                    Theme: Purple Galaxy
+                </p>
+
+                <p>
+                    Version 1.0
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Bottom Navigation -->
+
+        <nav>
+
+            <button onclick="showPage('home')">
+                🏠
+                <span>Home</span>
+            </button>
+
+
+            <button onclick="showPage('symptoms')">
+                🩹
+                <span>Symptoms</span>
+            </button>
+
+
+            <button onclick="showPage('selfcare')">
+                🕯
+                <span>Care</span>
+            </button>
+
+
+            <button onclick="showPage('vault')">
+                📖
+                <span>Vault</span>
+            </button>
+
+
+            <button onclick="showPage('settings')">
+                ⚙️
+                <span>Settings</span>
+            </button>
+
+        </nav>
+
+
+    </section>
+
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
