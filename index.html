@@ -3,25 +3,18 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yorel Versus MS</title>
 
-    <title>Yorel Versus MS</title>
+<link rel="manifest" href="manifest.json">
 
+<link rel="stylesheet" href="style.css">
 
-    <!-- PWA SETTINGS -->
+<link rel="icon" href="assets/icons/icon-192.png">
 
-    <link rel="manifest" href="manifest.json">
-
-    <meta name="theme-color" content="#7b2cbf">
-
-    <link rel="icon" 
-    type="image/png" 
-    href="assets/icons/icon-192.png">
-
-
-    <link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#7b2cbf">
 
 </head>
 
@@ -32,16 +25,14 @@
 <div class="app">
 
 
-<!-- WELCOME SCREEN -->
-
-<section id="welcome" class="screen active">
+<section id="welcome" class="welcome">
 
 
-<div class="book">
+<div class="hero">
 
 
-<div class="stars">
-✨ 🌙 ✨
+<div class="avatar">
+🦋
 </div>
 
 
@@ -52,15 +43,17 @@ Versus MS
 
 
 <p>
-A place to track symptoms,
-celebrate victories, practice self-care,
-and remember that MS is only one chapter
-of your story.
+the good, the bad & the brain fog ✨
+</p>
+
+
+<p class="small">
+a digital diary of my chronic illness journey
 </p>
 
 
 <button onclick="enterApp()">
-Open My Journal 💜
+Enter My Universe 💜
 </button>
 
 
@@ -73,156 +66,116 @@ Open My Journal 💜
 
 
 
-<!-- MAIN APP -->
-
-<section id="mainApp" class="hidden">
+<main id="appContent" class="hidden">
 
 
 
-<div id="home" class="page active">
+<section id="home" class="page active">
+
+<h2>
+🌙 Today's Chapter
+</h2>
+
+
+<div class="card">
+
+<h3>
+How is your body today?
+</h3>
+
+
+<p>
+Track your energy, symptoms, and feelings.
+</p>
+
+
+<label>
+⚡ Spoon Level
+<input type="range">
+</label>
+
+
+<label>
+🦋 Pain Level
+<input type="range">
+</label>
+
+
+<label>
+🧠 Brain Fog
+<input type="range">
+</label>
+
+
+</div>
+
+
+<div class="card quote">
+
+✨
+You are more than your diagnosis.
+✨
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="journey" class="page">
 
 
 <h2>
-🌙 Welcome Back
+🩹 My MS Journey
 </h2>
 
 
 <div class="card">
 
 
-<h3>
-Today's Check-In
-</h3>
-
+<p>
+💉 Infusions
+</p>
 
 <p>
-How is your body feeling today?
+👁 Vision Updates
+</p>
+
+<p>
+🧠 Symptoms
+</p>
+
+<p>
+📋 Doctor Notes
 </p>
 
 
-<div class="stats">
+<textarea placeholder="Write today's MS update..."></textarea>
 
 
-<div>
-⚡ Energy
-<input type="range">
-</div>
-
-
-
-<div>
-💜 Mood
-<input type="range">
-</div>
-
-
-
-<div>
-🦋 Pain
-<input type="range">
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-Daily Reminder
-</h3>
-
-
-<p>
-You are allowed to rest.
-Your body is still worthy on hard days.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div id="symptoms" class="page">
-
-
-<h2>
-🩹 Symptom Tracker
-</h2>
-
-
-
-<div class="card">
-
-
-<label>
-Fatigue
-<input type="range">
-</label>
-
-
-
-<label>
-Nerve Pain
-<input type="range">
-</label>
-
-
-
-<label>
-Mobility
-<input type="range">
-</label>
-
-
-
-<label>
-Vision
-<input type="range">
-</label>
-
-
-
-<textarea placeholder="Write your symptoms..."></textarea>
-
-
-
-<button onclick="saveData()">
-Save Check-In 💾
+<button onclick="saveEntry()">
+Save Chapter 💜
 </button>
 
 
 </div>
 
 
-</div>
+</section>
 
 
 
 
 
 
-
-<div id="selfcare" class="page">
+<section id="selfcare" class="page">
 
 
 <h2>
-🕯 Self Care Room
+🕯 Self Care Sanctuary
 </h2>
 
 
@@ -233,22 +186,22 @@ Save Check-In 💾
 </p>
 
 <p>
-✨ Breathing Exercises
+🌙 Breathing Exercises
 </p>
 
 <p>
-✨ Affirmations
+💜 Affirmations
 </p>
 
 <p>
-✨ Healing Sounds
+🔮 Comfort Rituals
 </p>
 
 
 </div>
 
 
-</div>
+</section>
 
 
 
@@ -256,37 +209,34 @@ Save Check-In 💾
 
 
 
-<div id="vault" class="page">
+<section id="evidence" class="page">
 
 
 <h2>
-📖 Evidence Vault
+📖 Evidence I Exist
 </h2>
-
 
 
 <div class="card">
 
 
 <p>
-Save your victories,
-good days, memories,
-and reminders that you are more than MS.
+Proof that I am still showing up.
 </p>
 
 
 <textarea placeholder="Today I am proud of..."></textarea>
 
 
-<button onclick="saveData()">
-Save Memory 💜
+<button onclick="saveEntry()">
+Save Memory ✨
 </button>
 
 
 </div>
 
 
-</div>
+</section>
 
 
 
@@ -294,60 +244,94 @@ Save Memory 💜
 
 
 
-<div id="settings" class="page">
+<section id="tarot" class="page">
 
 
 <h2>
-⚙️ Settings
+🔮 Tarot Reflection
 </h2>
 
+
+<div class="card">
+
+
+<h3>
+Today's Card
+</h3>
+
+
+<p>
+Pull a card and reflect on your journey.
+</p>
+
+
+<button>
+Draw Card 🃏
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="community" class="page">
+
+
+<h2>
+🦋 Chronic Cutie Community
+</h2>
 
 
 <div class="card">
 
 
 <p>
-🌌 Theme: Purple Galaxy
+A safe space for:
 </p>
 
 
 <p>
-Version 1.0
-</p>
+💜 Spoonies</p>
+<p>
+🩼 Mobility Warriors</p>
+<p>
+✨ Caregivers & Allies</p>
 
 
 </div>
 
 
-</div>
+</section>
 
 
 
 
 
-
-
-<!-- BOTTOM NAV -->
 
 <nav>
 
 
 <button onclick="showPage('home')">
-🏠
+🌙
 <span>
-Home
+Today
 </span>
 </button>
 
 
-
-<button onclick="showPage('symptoms')">
+<button onclick="showPage('journey')">
 🩹
 <span>
-Symptoms
+MS
 </span>
 </button>
-
 
 
 <button onclick="showPage('selfcare')">
@@ -358,20 +342,18 @@ Care
 </button>
 
 
-
-<button onclick="showPage('vault')">
+<button onclick="showPage('evidence')">
 📖
 <span>
-Vault
+Wins
 </span>
 </button>
 
 
-
-<button onclick="showPage('settings')">
-⚙️
+<button onclick="showPage('tarot')">
+🔮
 <span>
-Settings
+Tarot
 </span>
 </button>
 
@@ -380,7 +362,7 @@ Settings
 
 
 
-</section>
+</main>
 
 
 </div>
@@ -392,39 +374,17 @@ Settings
 <script src="script.js"></script>
 
 
-
-<!-- SERVICE WORKER -->
-
 <script>
 
-if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator){
 
 navigator.serviceWorker.register(
 "service-worker.js"
-)
-
-.then(function(){
-
-console.log(
-"Yorel Versus MS app is ready 💜"
 );
-
-})
-
-.catch(function(error){
-
-console.log(
-"Service Worker Error:",
-error
-);
-
-});
-
 
 }
 
 </script>
-
 
 
 </body>
