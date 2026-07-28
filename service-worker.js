@@ -1,131 +1,60 @@
-// Yorel Versus MS Service Worker
-
-const CACHE_NAME = "yorel-versus-ms-v1";
+const CACHE_NAME="yorel-ms-v1";
 
 
-const FILES_TO_CACHE = [
+const FILES=[
 
-    "./",
+"./",
 
-    "./index.html",
+"./index.html",
 
-    "./style.css",
+"./style.css",
 
-    "./script.js",
+"./script.js",
 
-    "./manifest.json",
+"./manifest.json",
 
-    "./assets/icons/icon-192.png",
+"./assets/icons/icon-192.png",
 
-    "./assets/icons/icon-512.png"
+"./assets/icons/icon-512.png"
 
 ];
 
 
-
-
-// Install App Files
-
 self.addEventListener(
 "install",
-event => {
+event=>{
 
+event.waitUntil(
 
-    event.waitUntil(
+caches.open(CACHE_NAME)
 
-        caches.open(CACHE_NAME)
+.then(cache=>{
 
-        .then(cache => {
+return cache.addAll(FILES);
 
-            return cache.addAll(
-                FILES_TO_CACHE
-            );
+})
 
-        })
-
-    );
-
+);
 
 });
 
 
-
-
-
-
-// Load Cached Files
 
 self.addEventListener(
 "fetch",
-event => {
+event=>{
 
+event.respondWith(
 
-    event.respondWith(
+caches.match(event.request)
 
-        caches.match(
-            event.request
-        )
+.then(response=>{
 
-        .then(response => {
+return response ||
+fetch(event.request);
 
+})
 
-            return response ||
-
-            fetch(
-                event.request
-            );
-
-
-        })
-
-    );
-
-
-});
-
-
-
-
-
-
-// Update Cache
-
-self.addEventListener(
-"activate",
-event => {
-
-
-    event.waitUntil(
-
-        caches.keys()
-
-        .then(keys => {
-
-
-            return Promise.all(
-
-                keys.map(key => {
-
-
-                    if(
-                        key !== CACHE_NAME
-                    ){
-
-                        return caches.delete(
-                            key
-                        );
-
-                    }
-
-
-                })
-
-            );
-
-
-        })
-
-    );
-
+);
 
 });
