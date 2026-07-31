@@ -7,85 +7,165 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Yorel • Profile</title>
+<title>My Profile 💜</title>
 
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/style.css">
 
 </head>
 
+
 <body>
 
-<div class="background"></div>
-<div class="sparkles"></div>
 
-<header class="app-header">
+<div class="app">
 
-<div class="logo">
-🌙 Yorel
-</div>
 
-<div class="profile-icon">
-👤
-</div>
+<header class="hero">
+
+<p class="tiny-text">
+✨ your chronic illness journey ✨
+</p>
+
+
+<h1>
+My Profile 💜
+</h1>
+
+
+<p>
+Your story, your progress, your chapter.
+</p>
+
 
 </header>
 
-<main class="page-content">
 
-<h1>👤 Profile</h1>
 
-<p class="page-description">
-Personalize your Yorel experience.
+
+
+<section class="card">
+
+
+<div class="card-title">
+🦋 About Me
+</div>
+
+
+
+
+<label>
+Name
+</label>
+
+
+<input 
+id="profileName"
+type="text"
+placeholder="Your name">
+
+
+
+
+
+<label>
+Diagnosis Journey
+</label>
+
+
+<input 
+id="diagnosis"
+type="text"
+placeholder="Example: MS + Optic Neuritis">
+
+
+
+
+
+<label>
+Treatment / Medication
+</label>
+
+
+<input 
+id="treatment"
+type="text"
+placeholder="Example: Rituximab 💉">
+
+
+
+
+
+<label>
+My Reminder
+</label>
+
+
+<textarea
+id="affirmationInput"
+placeholder="Something you want to remember on hard days..."
+></textarea>
+
+
+
+
+
+<button 
+class="primary-btn"
+id="saveProfile">
+
+💜 Save Profile
+
+</button>
+
+
+
+<p id="profileMessage"></p>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="card">
+
+
+<div class="card-title">
+✨ My Chapter
+</div>
+
+
+
+<div id="profileDisplay">
+
+<p>
+Your profile will appear here.
 </p>
 
-<div class="card">
-
-<h2>Your Profile</h2>
-
-<p>Name</p>
-
-<p>Pronouns</p>
-
-<p>Favorite Theme</p>
-
-<p>Notifications</p>
 
 </div>
 
-<div class="card">
 
-<h2>Future Features</h2>
 
-<ul>
+</section>
 
-<li>🎨 Theme selection</li>
 
-<li>🩺 Health profile</li>
 
-<li>💊 Medication preferences</li>
 
-<li>🔔 Reminder settings</li>
 
-<li>☁️ Backup & Sync</li>
-
-</ul>
 
 </div>
 
-</main>
 
-<nav class="bottom-nav">
 
-<a href="home.html">🏠<span>Home</span></a>
+<script src="../js/storage.js"></script>
 
-<a href="journal.html">📖<span>Journal</span></a>
+<script src="../js/profile.js"></script>
 
-<a href="selfcare.html">💜<span>Care</span></a>
-
-<a href="profile.html">👤<span>Profile</span></a>
-
-</nav>
 
 </body>
 
