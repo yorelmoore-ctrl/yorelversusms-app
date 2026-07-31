@@ -8,6 +8,9 @@ document.getElementById(
 
 
 
+if(button){
+
+
 button.addEventListener(
 "click",
 ()=>{
@@ -19,9 +22,10 @@ localStorage.setItem(
 );
 
 
-
 });
 
+
+}
 
 
 });
