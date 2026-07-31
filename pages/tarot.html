@@ -34,11 +34,12 @@ Reflection ✨
 
 
 <p>
-A moment to check in with yourself and your journey.
+A moment to connect with yourself and your healing journey.
 </p>
 
 
 </header>
+
 
 
 
@@ -54,26 +55,29 @@ A moment to check in with yourself and your journey.
 
 
 <div class="tarot-icon">
-
 ✨
-
 </div>
 
 
 
-<h2>
+<h2 id="cardName">
 The Star
 </h2>
 
 
-<p>
+
+<p id="cardMeaning">
 Hope • Healing • Renewal
 </p>
 
 
 
-<button class="primary-btn">
-Draw New Card
+<button 
+class="primary-btn"
+id="drawCard">
+
+🔮 Draw Card
+
 </button>
 
 
@@ -94,15 +98,12 @@ Draw New Card
 
 
 
-<p>
-"What part of myself needs more patience and compassion today?"
+<p id="cardPrompt">
+
+What part of yourself needs more patience today?
+
 </p>
 
-
-
-<button class="secondary-btn">
-Write Reflection
-</button>
 
 
 </section>
@@ -113,17 +114,23 @@ Write Reflection
 
 
 
-<section class="journal-banner">
+<section class="card">
 
 
-<h2>
-Your Energy Matters 💜
-</h2>
+<div class="card-title">
+📜 Recent Pulls
+</div>
 
+
+
+<div id="tarotHistory">
 
 <p>
-Your diagnosis is one chapter of your story — not the whole book.
+Your cards will appear here.
 </p>
+
+
+</div>
 
 
 </section>
@@ -134,6 +141,13 @@ Your diagnosis is one chapter of your story — not the whole book.
 
 
 </div>
+
+
+
+
+<script src="../js/storage.js"></script>
+
+<script src="../js/tarot.js"></script>
 
 
 
