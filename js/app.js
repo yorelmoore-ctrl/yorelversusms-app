@@ -1,135 +1,137 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
 
-    // GREETING SYSTEM
+const profile =
+getData("profile");
 
-    const greeting = document.querySelector(".hero h1");
 
 
-    const hour = new Date().getHours();
+const symptoms =
+getSymptoms();
 
 
-    let timeGreeting;
 
+const journals =
+getJournal();
 
-    if (hour < 12) {
 
-        timeGreeting = "Good Morning";
 
-    } else if (hour < 18) {
+const tarot =
+getData("tarotPulls");
 
-        timeGreeting = "Good Afternoon";
 
-    } else {
 
-        timeGreeting = "Good Evening";
 
-    }
 
+// PROFILE GREETING
 
-    greeting.innerHTML =
-    `${timeGreeting},<br>Yorel 💜`;
 
+const welcome =
+document.getElementById("welcome");
 
 
 
+if(profile){
 
-    // DAILY AFFIRMATIONS
+welcome.innerHTML =
+`Welcome,<br>${profile.name} 💜`;
 
-    const affirmations = [
+}
 
-        "You are allowed to rest and still be powerful. 💜",
+else{
 
-        "Your body is not your enemy. It is communicating with you. 🦋",
+welcome.innerHTML =
+"Welcome 💜";
 
-        "A slow day is still a day forward. ✨",
+}
 
-        "You are more than your diagnosis. 🌙",
 
-        "Small victories are still victories. 🌱",
 
-        "Your story deserves to be documented. 📖"
 
-    ];
 
 
 
-    const affirmationBox =
-    document.getElementById("affirmation");
+// SYMPTOMS
 
 
+if(symptoms){
 
-    const randomAffirmation =
-    affirmations[
-        Math.floor(Math.random() * affirmations.length)
-    ];
 
+document.getElementById("homeSpoons")
+.textContent =
+symptoms.spoons+"/10";
 
 
-    affirmationBox.textContent =
-    randomAffirmation;
+document.getElementById("homePain")
+.textContent =
+symptoms.pain+"/10";
 
 
+document.getElementById("homeFog")
+.textContent =
+symptoms.brainFog+"/10";
 
 
+document.getElementById("homeMood")
+.textContent =
+symptoms.mood;
 
 
-    // JOURNAL BUTTON
+}
 
-    const journalButton =
-    document.querySelector(".journal-banner .primary-btn");
 
 
-    journalButton.addEventListener("click", () => {
 
 
-        alert(
-        "Your journal sanctuary is opening soon 💜"
-        );
 
 
-    });
+// JOURNAL
 
 
+if(journals.length){
 
 
+const latest =
+journals[journals.length-1];
 
 
-    // TAROT BUTTON
+document.getElementById(
+"latestJournal"
+)
+.textContent =
+latest.text;
 
-    const tarotButton =
-    document.querySelector(".secondary-btn");
 
+}
 
-    tarotButton.addEventListener("click", () => {
 
 
-        alert(
-        "🔮 Your card is being shuffled... Tarot feature coming soon!"
-        );
 
 
-    });
 
+// TAROT
 
 
+if(tarot && tarot.length){
 
 
-    // DAILY ENTRY BUTTON
+const latestCard =
+tarot[tarot.length-1];
 
-    const entryButton =
-    document.querySelector(".card .primary-btn");
 
+document.getElementById(
+"latestCard"
+)
+.textContent =
+latestCard.card;
 
-    entryButton.addEventListener("click", () => {
 
 
-        alert(
-        "Today's chapter check-in is opening soon 🦋"
-        );
+}
 
 
-    });
+
+
 
 
 
