@@ -33,7 +33,7 @@ My MS Journey 💜
 
 
 <p>
-Tracking the good days, hard days, and everything between.
+Track symptoms, treatments, and daily wins.
 </p>
 
 
@@ -41,59 +41,231 @@ Tracking the good days, hard days, and everything between.
 
 
 
+
+
+
+
 <section class="card">
 
+
 <div class="card-title">
-🩵 Symptom Check-In
+🦋 Daily Symptom Check-In
 </div>
 
 
-<div class="tracker-grid">
+
+<label>
+⚡ Spoon Level
+</label>
+
+<input 
+type="range"
+id="spoons"
+min="0"
+max="10"
+value="5">
 
 
-<div class="tracker">
-<span>👁️</span>
-<p>Vision</p>
-<strong>Good</strong>
-</div>
+
+<p>
+Value: <span id="spoonsValue">5</span>/10
+</p>
 
 
-<div class="tracker">
-<span>⚡</span>
-<p>Energy</p>
-<strong>Low</strong>
-</div>
 
 
-<div class="tracker">
-<span>🦵</span>
-<p>Mobility</p>
-<strong>Okay</strong>
-</div>
+
+<label>
+🩹 Pain Level
+</label>
+
+<input 
+type="range"
+id="pain"
+min="0"
+max="10"
+value="3">
 
 
-<div class="tracker">
-<span>💊</span>
-<p>Treatment</p>
-<strong>Rituximab</strong>
-</div>
+
+<p>
+Value: <span id="painValue">3</span>/10
+</p>
 
 
-</div>
+
+
+
+
+
+<label>
+🧠 Brain Fog
+</label>
+
+<input 
+type="range"
+id="brainFog"
+min="0"
+max="10"
+value="3">
+
+
+
+<p>
+Value: <span id="brainFogValue">3</span>/10
+</p>
+
+
+
+
+
+
+
+<label>
+👁️ Vision Issues
+</label>
+
+<input 
+type="range"
+id="vision"
+min="0"
+max="10"
+value="0">
+
+
+
+<p>
+Value: <span id="visionValue">0</span>/10
+</p>
+
+
+
+
+
+
+
+<label>
+🦵 Mobility Difficulty
+</label>
+
+<input 
+type="range"
+id="mobility"
+min="0"
+max="10"
+value="2">
+
+
+
+<p>
+Value: <span id="mobilityValue">2</span>/10
+</p>
+
+
+
+
+
+
+
+<label>
+🌈 Mood
+</label>
+
+
+<select id="mood">
+
+<option>
+Hopeful
+</option>
+
+<option>
+Okay
+</option>
+
+<option>
+Tired
+</option>
+
+<option>
+Overwhelmed
+</option>
+
+<option>
+Happy
+</option>
+
+</select>
+
+
+
+
+
+
+<button class="primary-btn" id="saveSymptoms">
+
+💾 Save Today's Check-In
+
+</button>
+
+
+
+
+<p id="savedMessage"></p>
+
+
 
 </section>
 
 
 
+
+
+
+
+<section class="card">
+
+
+<div class="card-title">
+💊 Treatment Journey
+</div>
+
+
+<p>
+Current DMT:
+<strong>
+Rituximab 💉
+</strong>
+</p>
+
+
+<p>
+Diagnosis Journey:
+<strong>
+MS + Optic Neuritis
+</strong>
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
 <section class="journal-banner">
 
+
 <h2>
-My Story Matters 📖
+Every Day Counts ✨
 </h2>
 
 
 <p>
-Every appointment, symptom, victory, and setback is part of my journey.
+Tracking your symptoms helps you understand your patterns.
 </p>
 
 
@@ -101,7 +273,17 @@ Every appointment, symptom, victory, and setback is part of my journey.
 
 
 
+
+
 </div>
+
+
+
+
+
+<script src="../js/storage.js"></script>
+
+<script src="../js/ms-tracker.js"></script>
 
 
 </body>
