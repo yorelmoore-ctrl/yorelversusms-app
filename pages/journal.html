@@ -44,6 +44,8 @@ A safe place for your thoughts, symptoms, memories, and victories.
 
 
 
+
+
 <section class="card">
 
 
@@ -53,66 +55,29 @@ A safe place for your thoughts, symptoms, memories, and victories.
 
 
 
-<div class="tracker-grid">
-
-
-<div class="tracker">
-
-<span>🌈</span>
-
-<p>Mood</p>
-
-<strong>Choose</strong>
-
-</div>
+<textarea 
+id="journalText"
+placeholder="Write about your day, symptoms, wins, feelings, or anything you want to remember..."
+></textarea>
 
 
 
-<div class="tracker">
 
-<span>🩹</span>
+<button 
+class="primary-btn"
+id="saveJournal">
 
-<p>Symptoms</p>
+💜 Save My Chapter
 
-<strong>Track</strong>
-
-</div>
-
-
-
-<div class="tracker">
-
-<span>✨</span>
-
-<p>Win Today</p>
-
-<strong>Record</strong>
-
-</div>
-
-
-
-<div class="tracker">
-
-<span>🌙</span>
-
-<p>Reflection</p>
-
-<strong>Write</strong>
-
-</div>
-
-
-
-</div>
-
-
-<button class="primary-btn">
-✍️ Start Writing
 </button>
 
 
+
+<p id="journalMessage"></p>
+
+
 </section>
+
 
 
 
@@ -123,27 +88,22 @@ A safe place for your thoughts, symptoms, memories, and victories.
 
 
 <div class="card-title">
-💜 My Reminders
+📚 Previous Chapters
 </div>
 
 
+<div id="journalEntries">
+
 <p>
-My body is adapting, not failing.
+Your memories will appear here.
 </p>
 
 
-<p>
-Rest is part of healing.
-</p>
-
-
-<p>
-I am still here. I am still becoming.
-</p>
-
+</div>
 
 
 </section>
+
 
 
 
@@ -169,9 +129,16 @@ Every chapter counts. Even the ones written in brain fog.
 
 
 
-
 </div>
 
+
+
+
+
+
+<script src="../js/storage.js"></script>
+
+<script src="../js/journal.js"></script>
 
 
 </body>
