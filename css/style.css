@@ -28,10 +28,7 @@ padding:0;
 
 body {
 
-font-family:
-"Inter",
-Arial,
-sans-serif;
+font-family:Arial,sans-serif;
 
 background:
 
@@ -59,6 +56,7 @@ padding-bottom:95px;
 
 
 
+
 .app {
 
 max-width:480px;
@@ -73,84 +71,11 @@ padding:20px;
 
 
 
-/* BRAND HEADER */
-
-
-.brand-header {
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-margin-bottom:20px;
-
-}
-
-
-
-.brand-icon {
-
-width:45px;
-
-height:45px;
-
-border-radius:50%;
-
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-
-background:
-
-linear-gradient(
-135deg,
-#c084fc,
-#a855f7
-);
-
-
-font-size:22px;
-
-}
-
-
-
-.brand-header h2 {
-
-font-size:18px;
-
-}
-
-
-
-.brand-header p {
-
-font-size:12px;
-
-opacity:.7;
-
-}
-
-
-
-
-
-/* HERO */
-
-
 .hero {
 
 padding:25px 5px;
 
-animation:
-
-fadeIn .8s ease;
+animation:fadeIn .8s ease;
 
 }
 
@@ -160,7 +85,7 @@ fadeIn .8s ease;
 
 font-size:12px;
 
-opacity:.75;
+opacity:.7;
 
 letter-spacing:1px;
 
@@ -192,45 +117,35 @@ line-height:1.6;
 
 
 
-/* CARDS */
-
-
 .card {
 
 background:
 
 var(--card);
 
-
 border:
 
 1px solid var(--border);
-
 
 backdrop-filter:
 
 blur(18px);
 
-
 border-radius:28px;
-
 
 padding:22px;
 
-
 margin-bottom:18px;
-
 
 box-shadow:
 
 0 15px 40px rgba(0,0,0,.25);
 
-
-animation:
-
-fadeUp .5s ease;
+animation:fadeUp .5s ease;
 
 }
+
+
 
 
 
@@ -248,20 +163,17 @@ margin-bottom:20px;
 
 
 
-/* TRACKERS */
-
-
 .tracker-grid {
 
 display:grid;
 
-grid-template-columns:
-
-1fr 1fr;
+grid-template-columns:1fr 1fr;
 
 gap:12px;
 
 }
+
+
 
 
 
@@ -271,17 +183,15 @@ background:
 
 rgba(0,0,0,.18);
 
-
 border-radius:20px;
-
 
 padding:15px;
 
-
 text-align:center;
 
-
 }
+
+
 
 
 
@@ -315,42 +225,31 @@ font-size:17px;
 
 
 
-/* BUTTONS */
-
-
-button,
 .primary-btn,
-.secondary-btn {
+.secondary-btn,
+button {
 
 
 display:block;
 
 width:100%;
 
-
 padding:15px;
-
 
 border-radius:22px;
 
+margin-top:18px;
 
 font-size:16px;
 
 font-weight:bold;
 
-
 text-align:center;
-
 
 text-decoration:none;
 
-
-margin-top:18px;
-
-
-transition:.3s;
-
 }
+
 
 
 
@@ -368,77 +267,51 @@ linear-gradient(
 
 color:#210b36;
 
-
 }
+
+
 
 
 
 .secondary-btn {
 
-background:
-
-transparent;
-
+background:transparent;
 
 border:
 
 1px solid rgba(255,255,255,.4);
 
-
 color:white;
 
-
-}
-
-
-
-button:hover,
-.primary-btn:hover,
-.secondary-btn:hover {
-
-transform:translateY(-2px);
-
 }
 
 
 
 
 
-/* FORMS */
-
-
-input,
 textarea,
+input,
 select {
 
 
 width:100%;
 
-
 padding:15px;
-
 
 border-radius:18px;
 
-
 border:none;
-
 
 background:
 
 rgba(0,0,0,.25);
 
-
 color:white;
-
-
-font-size:15px;
-
 
 margin-top:8px;
 
-
 }
+
 
 
 
@@ -448,8 +321,6 @@ textarea {
 min-height:150px;
 
 resize:none;
-
-line-height:1.5;
 
 }
 
@@ -471,19 +342,6 @@ font-weight:bold;
 
 
 
-input[type="range"] {
-
-accent-color:#d8b4fe;
-
-}
-
-
-
-
-
-/* TAROT */
-
-
 .tarot-card {
 
 text-align:center;
@@ -499,21 +357,15 @@ width:90px;
 
 height:130px;
 
-
 margin:20px auto;
-
 
 border-radius:18px;
 
-
 display:flex;
-
 
 align-items:center;
 
-
 justify-content:center;
-
 
 font-size:40px;
 
@@ -533,9 +385,6 @@ linear-gradient(
 
 
 
-/* JOURNAL */
-
-
 .journal-banner {
 
 
@@ -550,12 +399,7 @@ rgba(59,7,100,.9)
 
 border-radius:28px;
 
-
 padding:25px;
-
-
-margin-bottom:20px;
-
 
 }
 
@@ -563,42 +407,28 @@ margin-bottom:20px;
 
 
 
-/* NAV */
-
-
 .bottom-nav {
 
 
 position:fixed;
 
-
 bottom:0;
-
 
 left:0;
 
-
 width:100%;
-
 
 display:flex;
 
-
 justify-content:space-around;
 
-
 padding:12px 5px;
-
 
 background:
 
 rgba(18,9,31,.95);
 
-
-backdrop-filter:
-
-blur(20px);
-
+backdrop-filter:blur(20px);
 
 border-top:
 
@@ -614,24 +444,17 @@ border-top:
 
 color:white;
 
-
 text-decoration:none;
-
 
 display:flex;
 
-
 flex-direction:column;
-
 
 align-items:center;
 
-
 font-size:11px;
 
-
 opacity:.7;
-
 
 }
 
@@ -639,22 +462,39 @@ opacity:.7;
 
 .bottom-nav .active {
 
-
 color:#d8b4fe;
 
 opacity:1;
-
 
 }
 
 
 
 
-/* ANIMATIONS */
+
+.onboarding {
+
+text-align:center;
+
+padding-top:50px;
+
+}
+
+
+
+
+
+.onboarding .tarot-icon {
+
+margin-bottom:25px;
+
+}
+
+
+
 
 
 @keyframes fadeIn {
-
 
 from {
 
@@ -662,22 +502,17 @@ opacity:0;
 
 }
 
-
 to {
 
 opacity:1;
 
 }
 
-
 }
 
 
 
-
-
 @keyframes fadeUp {
-
 
 from {
 
@@ -687,7 +522,6 @@ transform:translateY(15px);
 
 }
 
-
 to {
 
 opacity:1;
@@ -695,6 +529,5 @@ opacity:1;
 transform:translateY(0);
 
 }
-
 
 }
