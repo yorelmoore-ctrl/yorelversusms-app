@@ -26,23 +26,25 @@
 
 <header class="hero">
 
+
 <p class="tiny-text">
 ✨ chronic illness survival mode ✨
 </p>
 
 
-<h1>
-Good Morning,<br>
-Yorel 💜
+<h1 id="welcome">
+Welcome 💜
 </h1>
 
 
 <p id="affirmation">
-You are allowed to rest and still be powerful.
+Your story matters.
 </p>
 
 
 </header>
+
+
 
 
 
@@ -60,77 +62,67 @@ You are allowed to rest and still be powerful.
 <div class="tracker-grid">
 
 
+
 <div class="tracker">
+
 <span>⚡</span>
+
 <p>Spoons</p>
-<strong>5/10</strong>
+
+<strong id="homeSpoons">
+-
+</strong>
+
 </div>
 
 
+
+
 <div class="tracker">
+
 <span>🩹</span>
+
 <p>Pain</p>
-<strong>3/10</strong>
+
+<strong id="homePain">
+-
+</strong>
+
 </div>
 
 
+
+
 <div class="tracker">
+
 <span>🧠</span>
+
 <p>Brain Fog</p>
-<strong>Low</strong>
+
+<strong id="homeFog">
+-
+</strong>
+
 </div>
+
+
 
 
 <div class="tracker">
+
 <span>🌈</span>
+
 <p>Mood</p>
-<strong>Okay</strong>
+
+<strong id="homeMood">
+-
+</strong>
+
 </div>
 
 
+
 </div>
-
-
-
-<button class="primary-btn">
-✍️ Add Today's Entry
-</button>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="card tarot-card">
-
-
-<div class="card-title">
-🔮 Tarot Reflection
-</div>
-
-
-<div class="tarot-icon">
-✨
-</div>
-
-
-<h3>
-Card Of The Day
-</h3>
-
-
-<p>
-Pull a card to reflect on your journey.
-</p>
-
-
-<button class="secondary-btn">
-Draw Card
-</button>
 
 
 </section>
@@ -145,28 +137,67 @@ Draw Card
 
 
 <div class="card-title">
-🌱 Self Care Sanctuary
+📖 Latest Chapter
 </div>
 
 
-<p>
-Today's reminder:
+<p id="latestJournal">
+
+No journal entries yet 💜
+
 </p>
 
 
-<h3>
-💜 Rest is productive.
-</h3>
 
+<a href="pages/journal.html"
+class="primary-btn">
 
-<p>
-Your body is fighting battles nobody sees.
-Be gentle with yourself today.
-</p>
+Write Entry
+
+</a>
 
 
 </section>
 
+
+
+
+
+
+
+<section class="card tarot-card">
+
+
+<div class="card-title">
+🔮 Latest Tarot Pull
+</div>
+
+
+
+<h2 id="latestCard">
+
+No card pulled yet
+
+</h2>
+
+
+<p id="latestMeaning">
+
+Visit tarot to pull a card.
+
+</p>
+
+
+
+<a href="pages/tarot.html"
+class="secondary-btn">
+
+Pull Tarot
+
+</a>
+
+
+</section>
 
 
 
@@ -178,19 +209,13 @@ Be gentle with yourself today.
 
 
 <h2>
-Evidence I Exist 📖
+Your Journey Counts ✨
 </h2>
 
 
 <p>
-Your story matters. Your symptoms matter.
-Your little wins matter.
+Every symptom, victory, and moment is part of your story.
 </p>
-
-
-<button class="primary-btn">
-Open Journal
-</button>
 
 
 </section>
@@ -201,6 +226,8 @@ Open Journal
 
 
 </div>
+
+
 
 
 
@@ -275,12 +302,10 @@ Community
 
 
 
-<!-- BUILD 2 STORAGE SYSTEM -->
+
 <script src="js/storage.js"></script>
 
-<!-- APP FUNCTIONS -->
 <script src="js/app.js"></script>
-
 
 </body>
 
