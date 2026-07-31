@@ -1,108 +1,88 @@
-// Yorel Versus MS Storage System 💜
+function saveData(key,data){
 
-
-// SAVE DATA
-
-function saveData(key, data){
-
-    localStorage.setItem(
-        key,
-        JSON.stringify(data)
-    );
+localStorage.setItem(
+key,
+JSON.stringify(data)
+);
 
 }
 
 
-
-
-// GET DATA
 
 function getData(key){
 
-    const data =
-    localStorage.getItem(key);
+const data =
+localStorage.getItem(key);
 
 
-    return data
-    ? JSON.parse(data)
-    : null;
+return data
+? JSON.parse(data)
+: null;
 
 }
 
 
-
-
-
-// DELETE DATA
 
 function deleteData(key){
 
-    localStorage.removeItem(key);
+localStorage.removeItem(key);
 
 }
 
 
 
 
-// SAVE SYMPTOM CHECK-IN
 
 function saveSymptoms(symptoms){
 
-    saveData(
-        "dailySymptoms",
-        symptoms
-    );
+saveData(
+"dailySymptoms",
+symptoms
+);
 
 }
 
 
-
-
-
-// GET SYMPTOMS
 
 function getSymptoms(){
 
-    return getData(
-        "dailySymptoms"
-    );
+return getData(
+"dailySymptoms"
+);
 
 }
 
 
 
 
-
-// SAVE JOURNAL ENTRY
 
 function saveJournal(entry){
 
-    let journal =
-    getData("journalEntries")
-    || [];
+
+let journal =
+getData("journalEntries")
+|| [];
 
 
-    journal.push(entry);
+journal.push(entry);
 
 
-    saveData(
-        "journalEntries",
-        journal
-    );
+
+saveData(
+"journalEntries",
+journal
+);
+
 
 }
 
 
 
-
-
-// GET JOURNAL
-
 function getJournal(){
 
-    return getData(
-        "journalEntries"
-    )
-    || [];
+return getData(
+"journalEntries"
+)
+|| [];
 
 }
