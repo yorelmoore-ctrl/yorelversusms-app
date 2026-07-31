@@ -64,6 +64,8 @@ opacity:.75;
 
 margin-bottom:12px;
 
+letter-spacing:1px;
+
 }
 
 
@@ -84,18 +86,25 @@ margin-bottom:15px;
 
 line-height:1.5;
 
+opacity:.9;
+
 }
+
 
 
 
 
 .card {
 
-background:rgba(255,255,255,.12);
+background:
+
+rgba(255,255,255,.12);
 
 backdrop-filter:blur(15px);
 
-border:1px solid rgba(255,255,255,.18);
+border:
+
+1px solid rgba(255,255,255,.18);
 
 border-radius:25px;
 
@@ -104,9 +113,11 @@ padding:20px;
 margin-bottom:18px;
 
 box-shadow:
+
 0 10px 30px rgba(0,0,0,.25);
 
 }
+
 
 
 
@@ -185,6 +196,9 @@ font-size:18px;
 
 
 
+/* BUTTONS */
+
+
 button {
 
 border:none;
@@ -240,6 +254,10 @@ border:1px solid rgba(255,255,255,.4);
 
 
 
+
+/* TAROT */
+
+
 .tarot-card {
 
 text-align:center;
@@ -264,6 +282,7 @@ align-items:center;
 
 border-radius:15px;
 
+
 background:
 
 linear-gradient(
@@ -272,12 +291,103 @@ linear-gradient(
 #c084fc
 );
 
+
 font-size:35px;
 
 }
 
 
 
+
+
+/* FORM STYLING */
+
+
+label {
+
+display:block;
+
+font-size:16px;
+
+font-weight:bold;
+
+margin-top:18px;
+
+margin-bottom:8px;
+
+}
+
+
+
+input[type="range"] {
+
+width:100%;
+
+height:8px;
+
+accent-color:#d8b4fe;
+
+}
+
+
+
+
+.card input + p {
+
+font-size:14px;
+
+opacity:.8;
+
+margin-top:6px;
+
+}
+
+
+
+
+select {
+
+width:100%;
+
+padding:14px;
+
+margin-top:8px;
+
+border-radius:15px;
+
+background:#241033;
+
+color:white;
+
+border:
+
+1px solid rgba(255,255,255,.3);
+
+font-size:15px;
+
+}
+
+
+
+
+
+#savedMessage {
+
+text-align:center;
+
+margin-top:15px;
+
+color:#d8b4fe;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+/* JOURNAL BANNER */
 
 
 .journal-banner {
@@ -290,6 +400,7 @@ rgba(168,85,247,.8),
 rgba(59,7,100,.8)
 );
 
+
 border-radius:25px;
 
 padding:25px;
@@ -300,16 +411,27 @@ margin-bottom:20px;
 
 
 
-.journal-banner p {
+.journal-banner h2 {
 
-margin-top:10px;
-
-line-height:1.5;
+margin-bottom:10px;
 
 }
 
 
 
+.journal-banner p {
+
+line-height:1.5;
+
+opacity:.9;
+
+}
+
+
+
+
+
+/* NAVIGATION */
 
 
 .bottom-nav {
@@ -322,19 +444,26 @@ left:0;
 
 width:100%;
 
+
 display:flex;
 
 justify-content:space-around;
 
+
 padding:12px 5px;
+
 
 background:
 
 rgba(18,9,31,.95);
 
+
 backdrop-filter:blur(15px);
 
-border-top:1px solid rgba(255,255,255,.15);
+
+border-top:
+
+1px solid rgba(255,255,255,.15);
 
 }
 
@@ -346,11 +475,14 @@ color:white;
 
 text-decoration:none;
 
+
 display:flex;
 
 flex-direction:column;
 
+
 align-items:center;
+
 
 font-size:11px;
 
