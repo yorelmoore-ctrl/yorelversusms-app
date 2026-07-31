@@ -1,390 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yorel Versus MS 💜</title>
 
-<title>Yorel Versus MS</title>
+    <link rel="stylesheet" href="css/style.css">
 
-<link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="icon" href="assets/icons/icon-192.png">
-
-<meta name="theme-color" content="#7b2cbf">
-
+    <meta name="theme-color" content="#8b5cf6">
 </head>
-
 
 <body>
 
-
 <div class="app">
 
+    <!-- HEADER -->
+    <header class="hero">
 
-<section id="welcome" class="welcome">
+        <p class="tiny-text">✨ chronic illness survival mode ✨</p>
 
+        <h1>
+            Good Morning,<br>
+            Yorel 💜
+        </h1>
 
-<div class="hero">
+        <p id="affirmation">
+            You are allowed to rest and still be powerful.
+        </p>
 
+    </header>
 
-<div class="avatar">
-🦋
-</div>
 
+    <!-- DAILY CHECK-IN -->
 
-<h1>
-Yorel<br>
-Versus MS
-</h1>
+    <section class="card">
 
+        <div class="card-title">
+            <span>🦋</span>
+            Today's Chapter
+        </div>
 
-<p>
-the good, the bad & the brain fog ✨
-</p>
 
+        <div class="tracker-grid">
 
-<p class="small">
-a digital diary of my chronic illness journey
-</p>
+            <div class="tracker">
+                <span>⚡</span>
+                <p>Spoons</p>
+                <strong>5/10</strong>
+            </div>
 
 
-<button onclick="enterApp()">
-Enter My Universe 💜
-</button>
+            <div class="tracker">
+                <span>🩹</span>
+                <p>Pain</p>
+                <strong>3/10</strong>
+            </div>
 
 
-</div>
+            <div class="tracker">
+                <span>🧠</span>
+                <p>Brain Fog</p>
+                <strong>Low</strong>
+            </div>
 
 
-</section>
+            <div class="tracker">
+                <span>🌈</span>
+                <p>Mood</p>
+                <strong>Okay</strong>
+            </div>
 
 
+        </div>
 
 
+        <button class="primary-btn">
+            ✍️ Add Today's Entry
+        </button>
 
-<main id="appContent" class="hidden">
 
+    </section>
 
 
-<section id="home" class="page active">
 
-<h2>
-🌙 Today's Chapter
-</h2>
+    <!-- TAROT -->
 
+    <section class="card tarot-card">
 
-<div class="card">
+        <div class="card-title">
+            <span>🔮</span>
+            Tarot Reflection
+        </div>
 
-<h3>
-How is your body today?
-</h3>
 
+        <div class="tarot-placeholder">
 
-<p>
-Track your energy, symptoms, and feelings.
-</p>
+            <div class="tarot-icon">
+                ✨
+            </div>
 
 
-<label>
-⚡ Spoon Level
-<input type="range">
-</label>
+            <h3>
+                Card Of The Day
+            </h3>
 
 
-<label>
-🦋 Pain Level
-<input type="range">
-</label>
+            <p>
+                Pull a card to reflect on your journey.
+            </p>
 
 
-<label>
-🧠 Brain Fog
-<input type="range">
-</label>
+        </div>
 
 
-</div>
+        <button class="secondary-btn">
+            Draw Card
+        </button>
 
 
-<div class="card quote">
+    </section>
 
-✨
-You are more than your diagnosis.
-✨
 
-</div>
 
 
-</section>
+    <!-- SELF CARE -->
 
+    <section class="card">
 
 
+        <div class="card-title">
+            <span>🌱</span>
+            Self Care Sanctuary
+        </div>
 
 
-<section id="journey" class="page">
+        <div class="self-care">
 
+            <p>
+                Today's reminder:
+            </p>
 
-<h2>
-🩹 My MS Journey
-</h2>
 
+            <h3>
+                💜 Rest is productive.
+            </h3>
 
-<div class="card">
 
+            <p>
+                Your body is fighting battles nobody sees.
+                Be gentle with yourself today.
+            </p>
 
-<p>
-💉 Infusions
-</p>
 
-<p>
-👁 Vision Updates
-</p>
+        </div>
 
-<p>
-🧠 Symptoms
-</p>
 
-<p>
-📋 Doctor Notes
-</p>
+    </section>
 
 
-<textarea placeholder="Write today's MS update..."></textarea>
 
 
-<button onclick="saveEntry()">
-Save Chapter 💜
-</button>
+    <!-- JOURNAL BUTTON -->
 
+    <section class="journal-banner">
 
-</div>
+        <h2>
+            Evidence I Exist 📖
+        </h2>
 
 
-</section>
+        <p>
+            Your story matters. Your symptoms matter.
+            Your little wins matter.
+        </p>
 
 
+        <button class="primary-btn">
+            Open Journal
+        </button>
 
 
+    </section>
 
 
-<section id="selfcare" class="page">
 
-
-<h2>
-🕯 Self Care Sanctuary
-</h2>
-
-
-<div class="card">
-
-<p>
-✨ Stretch Library
-</p>
-
-<p>
-🌙 Breathing Exercises
-</p>
-
-<p>
-💜 Affirmations
-</p>
-
-<p>
-🔮 Comfort Rituals
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section id="evidence" class="page">
-
-
-<h2>
-📖 Evidence I Exist
-</h2>
-
-
-<div class="card">
-
-
-<p>
-Proof that I am still showing up.
-</p>
-
-
-<textarea placeholder="Today I am proud of..."></textarea>
-
-
-<button onclick="saveEntry()">
-Save Memory ✨
-</button>
 
 
 </div>
 
 
-</section>
 
 
 
+<!-- BOTTOM NAVIGATION -->
+
+<nav class="bottom-nav">
 
 
+    <button class="active">
+        🏠
+        <span>Home</span>
+    </button>
 
 
-<section id="tarot" class="page">
+    <button>
+        🧠
+        <span>MS Journey</span>
+    </button>
 
 
-<h2>
-🔮 Tarot Reflection
-</h2>
+    <button>
+        ✨
+        <span>Journal</span>
+    </button>
 
 
-<div class="card">
+    <button>
+        🔮
+        <span>Tarot</span>
+    </button>
 
 
-<h3>
-Today's Card
-</h3>
-
-
-<p>
-Pull a card and reflect on your journey.
-</p>
-
-
-<button>
-Draw Card 🃏
-</button>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section id="community" class="page">
-
-
-<h2>
-🦋 Chronic Cutie Community
-</h2>
-
-
-<div class="card">
-
-
-<p>
-A safe space for:
-</p>
-
-
-<p>
-💜 Spoonies</p>
-<p>
-🩼 Mobility Warriors</p>
-<p>
-✨ Caregivers & Allies</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<nav>
-
-
-<button onclick="showPage('home')">
-🌙
-<span>
-Today
-</span>
-</button>
-
-
-<button onclick="showPage('journey')">
-🩹
-<span>
-MS
-</span>
-</button>
-
-
-<button onclick="showPage('selfcare')">
-🕯
-<span>
-Care
-</span>
-</button>
-
-
-<button onclick="showPage('evidence')">
-📖
-<span>
-Wins
-</span>
-</button>
-
-
-<button onclick="showPage('tarot')">
-🔮
-<span>
-Tarot
-</span>
-</button>
+    <button>
+        💜
+        <span>Community</span>
+    </button>
 
 
 </nav>
 
 
 
-</main>
 
 
-</div>
-
-
-
-
-
-<script src="script.js"></script>
-
-
-<script>
-
-if ("serviceWorker" in navigator){
-
-navigator.serviceWorker.register(
-"service-worker.js"
-);
-
-}
-
-</script>
+<script src="js/app.js"></script>
 
 
 </body>
